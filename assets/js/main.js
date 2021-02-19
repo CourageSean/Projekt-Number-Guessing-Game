@@ -78,7 +78,7 @@ const guess = () => {
       guessDisplay();
     } else {
       console.log("u reached max guesses");
-      textBox.innerHTML += `<br> you have reached your maximum guesses, play again`;
+      textBox.innerHTML += `<br> you have reached your maximum guesses, the number you were guessing is ${a}, play again`;
       btn.style.visibility = "hidden";
       playAgain.style.visibility = "visible";
     }
@@ -88,6 +88,7 @@ const guess = () => {
       guessDisplay();
     } else {
       console.log("u reached max guesses");
+      textBox.innerHTML += `<br> you have reached your maximum guesses, the number you were guessing is ${a}, play again`;
       btn.style.visibility = "hidden";
       playAgain.style.visibility = "visible";
     }
@@ -97,6 +98,7 @@ const guess = () => {
       increment += 1;
       guessDisplay();
     } else {
+      textBox.innerHTML += `<br> you have reached your maximum guesses, the number you were guessing is ${a}, play again`;
       btn.style.visibility = "hidden";
       playAgain.style.visibility = "visible";
     }
@@ -106,7 +108,7 @@ const guess = () => {
       guessDisplay();
     } else {
       console.log("u reached max guesses");
-      textBox.innerHTML += `<br> you have reached your maximum guesses, play again`;
+      textBox.innerHTML += `<br> you have reached your maximum guesses, the number you were guessing is ${a}, play again`;
       btn.style.visibility = "hidden";
       playAgain.style.visibility = "visible";
     }
