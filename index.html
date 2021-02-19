@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guessing Game</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <section>
+      <div>
+        <h3>
+          <span id="incrementTxt"></span>/ <span id="incrementTxt2"></span>
+        </h3>
+        <h3>how many guesses u need?</h3>
+      </div>
+      <p>to guess nr</p>
+      <h4 id="randomNrDisplay"></h4>
+      <label for="guessRound4">4</label>
+      <input
+        id="guessRound4"
+        type="radio"
+        name="guessRounds"
+        onchange="counterDisplay()"
+        checked
+      />
+      <label for="guessRound5">5</label>
+      <input
+        id="guessRound5"
+        type="radio"
+        name="guessRounds"
+        onchange="counterDisplay()"
+      />
+      <label for="guessRound6">6</label>
+      <input
+        id="guessRound6"
+        type="radio"
+        name="guessRounds"
+        onchange="counterDisplay()"
+      />
+      <label for="guessRoundCostum">Costum</label>
+      <input
+        id="guessRoundCostum"
+        type="radio"
+        name="guessRounds"
+        onchange="counterDisplay()"
+      />
+
+      <input id="costumNr" type="number" onchange="randomGenerator()" />
+      <br />
+      <label for="guessedNumber">guess Number</label>
+      <input type="number" id="guessedNumber" />
+      <input id="btn" type="button" value="increment" />
+      <input id="playAgain" type="button" value="Play Again" />
+      <input type="button" value="Reset" onclick="randomGenerator()" />
+      <h4 id="textBox">sss</h4>
+    </section>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
