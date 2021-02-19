@@ -31,6 +31,10 @@ function randomGenerator() {
   textBox.innerHTML = " ";
   btn.style.visibility = "visible";
   playAgain.style.visibility = "hidden";
+  guessRound4.style.visibility = "visible";
+  guessRound5.style.visibility = "visible";
+  guessRound6.style.visibility = "visible";
+  guessRoundCostum.style.visibility = "visible";
 }
 
 function counterDisplay() {
@@ -113,6 +117,11 @@ const guess = () => {
       playAgain.style.visibility = "visible";
     }
   }
+  guessRound4.style.visibility = "hidden";
+  guessRound5.style.visibility = "hidden";
+  guessRound6.style.visibility = "hidden";
+  guessRoundCostum.style.visibility = "hidden";
+
   incrementTxt.innerHTML = increment;
 };
 btn.addEventListener("click", guess);
