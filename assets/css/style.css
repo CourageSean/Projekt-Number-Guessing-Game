@@ -5,7 +5,7 @@
 }
 
 body {
-  background: url(../images/wall-paper-14.jpg) fixed center center;
+  background: url(../images/wall-paper-14.jpg) center center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
@@ -37,12 +37,54 @@ body {
   right: 20%;
   top: 70%;
 }
+
 #ship-container {
   width: 23%;
   position: absolute;
+
   top: 25%;
+  -webkit-animation-name: shipMove;
+  animation-name: shipMove;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
 }
 
 img {
   width: 100%;
+}
+
+#textBox {
+  position: absolute;
+}
+
+@-webkit-keyframes shipMove {
+  0% {
+    transform: translateX(0px);
+  }
+
+  25% {
+    transform: translateX(100px);
+  }
+  50% {
+    transform: translateX(300px);
+  }
+  100% {
+    transform: translateX(400px);
+  }
+}
+
+@keyframes shipMove {
+  0% {
+    transform: translateX(0px);
+  }
+
+  25% {
+    transform: translateX(100px);
+  }
+  50% {
+    transform: translateX(300px);
+  }
+  100% {
+    transform: translateX(400px);
+  }
 }
