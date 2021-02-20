@@ -21,15 +21,26 @@ body {
 
 #img-wrapper {
   position: relative;
+  width: 100vw;
+  height: 30vh;
 }
 
 .img-container {
-  width: 23%;
+  width: 17%;
   position: absolute;
+  top: 90%;
+  left: 37%;
 }
 #flag-container {
   width: 23%;
   position: absolute;
+  right: 20%;
+  top: 70%;
+}
+#ship-container {
+  width: 23%;
+  position: absolute;
+  top: 25%;
 }
 
 img {
