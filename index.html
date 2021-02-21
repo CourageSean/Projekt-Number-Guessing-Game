@@ -10,50 +10,12 @@
   <body>
     <section>
       <div>
-        <h3>
-          <span id="incrementTxt"></span>/ <span id="incrementTxt2"></span>
-        </h3>
+        <h3><span id="ncrementTxt"></span>/ <span id="ncrementTxt2"></span></h3>
         <h3>how many guesses u need?</h3>
       </div>
-      <p>to guess nr</p>
-      <h4 id="randomNrDisplay"></h4>
-      <label for="guessRound4">4</label>
-      <input
-        id="guessRound4"
-        type="radio"
-        name="guessRounds"
-        onchange="counterDisplay()"
-        checked
-      />
-      <label for="guessRound5">5</label>
-      <input
-        id="guessRound5"
-        type="radio"
-        name="guessRounds"
-        onchange="counterDisplay()"
-      />
-      <label for="guessRound6">6</label>
-      <input
-        id="guessRound6"
-        type="radio"
-        name="guessRounds"
-        onchange="counterDisplay()"
-      />
-      <label for="guessRoundCostum">Costum</label>
-      <input
-        id="guessRoundCostum"
-        type="radio"
-        name="guessRounds"
-        onchange="counterDisplay()"
-      />
 
-      <input id="costumNr" type="number" onchange="randomGenerator()" />
-      <br />
-      <label for="guessedNumber">guess Number</label>
-      <input type="number" id="guessedNumber" />
-      <input id="btn" type="button" value="GUESS" />
       <input id="playAgain" type="button" value="Play Again" />
-      <input type="button" value="Reset" onclick="randomGenerator()" />
+
       <h4 id="textBox">KJHJHJsss</h4>
       <div id="img-wrapper">
         <div id="ship-container">
@@ -63,18 +25,83 @@
             alt=""
           />
         </div>
-        <div class="img-container">
+        <div id="treasureOpened" class="img-container">
+          <img src="assets/images/treasure_open-removebg-preview.png" alt="" />
+        </div>
+        <div id="treasureClosed" class="img-container">
           <img
             src="assets/images/treasure_closed-removebg-preview.png"
             alt=""
           />
         </div>
-        <div class="img-container">
-          <img src="assets/images/treasure_open-removebg-preview.png" alt="" />
-        </div>
+
         <div id="flag-container">
+          <h3 id="counterFlag">
+            <span id="incrementTxt"></span> &nbsp/&nbsp
+            <span id="incrementTxt2"></span>
+          </h3>
           <img
             src="assets/images/black-flag-png-100-images-in-collection-page-2-black-flag-png-470_400.png"
+            alt=""
+          />
+        </div>
+        <div id="barrel-container">
+          <h4>to guess nr</h4>
+          <h4 id="randomNrDisplay"></h4>
+
+          <p>
+            In how many Rounds do you think you can guess the Number to open the
+            treasure chest?
+          </p>
+          <label for="guessRound4">4</label>
+          <input
+            id="guessRound4"
+            type="radio"
+            name="guessRounds"
+            onchange="counterDisplay()"
+            checked
+          />
+          <label for="guessRound5">5</label>
+          <input
+            id="guessRound5"
+            type="radio"
+            name="guessRounds"
+            onchange="counterDisplay()"
+          />
+          <label for="guessRound6">6</label>
+          <input
+            id="guessRound6"
+            type="radio"
+            name="guessRounds"
+            onchange="counterDisplay()"
+          />
+          <label for="guessRoundCostum">Costum</label>
+          <input
+            id="guessRoundCostum"
+            type="radio"
+            name="guessRounds"
+            onchange="counterDisplay()"
+          />
+
+          <input id="costumNr" type="number" onchange="randomGenerator()" />
+          <br />
+          <label for="guessedNumber">guess Number</label>
+          <input type="number" id="guessedNumber" />
+          <input id="btn" type="button" value="GUESS" />
+          <img
+            src="assets/images/pnghut_barrel-clip-art-wood-beer-beige-zongzi-clipart.png"
+            alt=""
+          />
+        </div>
+        <div id="skull-container">
+          <input
+            id="reset"
+            type="button"
+            value="Reset"
+            onclick="randomGenerator()"
+          />
+          <img
+            src="assets/images/pnghut_skull-and-crossbones-decal-sticker-human-symbolism-king.png"
             alt=""
           />
         </div>

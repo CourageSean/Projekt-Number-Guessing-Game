@@ -10,6 +10,8 @@ let guessRoundCostum = document.getElementById("guessRoundCostum");
 let guessedNumber = document.getElementById("guessedNumber");
 let textBox = document.getElementById("textBox");
 let playAgain = document.getElementById("playAgain");
+let treasureOpened = document.getElementById("treasureOpened");
+let treasureClosed = document.getElementById("treasureClosed");
 let randomNr;
 let maxGuessNr;
 let increment = 0;
@@ -35,6 +37,8 @@ function randomGenerator() {
   guessRound5.style.visibility = "visible";
   guessRound6.style.visibility = "visible";
   guessRoundCostum.style.visibility = "visible";
+  treasureOpened.style.opacity = "0";
+  treasureClosed.style.opacity = "1";
 }
 
 function counterDisplay() {
@@ -67,6 +71,8 @@ const guessDisplay = () => {
     );
     textBox.innerHTML += `<br> you need to guess higher than ${guessedNumber.value} , try again`;
   } else {
+    treasureOpened.style.opacity = "1";
+    treasureClosed.style.opacity = "0";
     console.log("you won! you got me in" + increment + "guesses, play again");
     textBox.innerHTML += `<br> you won! you got me in ${increment}  guesses, play again`;
 
