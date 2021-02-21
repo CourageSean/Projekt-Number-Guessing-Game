@@ -9,9 +9,13 @@ let guessRound6 = document.getElementById("guessRound6");
 let guessRoundCostum = document.getElementById("guessRoundCostum");
 let guessedNumber = document.getElementById("guessedNumber");
 let textBox = document.getElementById("textBox");
-let playAgain = document.getElementById("playAgain");
-let treasureOpened = document.getElementById("treasureOpened");
-let treasureClosed = document.getElementById("treasureClosed");
+const playAgain = document.getElementById("playAgain");
+const treasureOpened = document.getElementById("treasureOpened");
+const treasureClosed = document.getElementById("treasureClosed");
+const barrelInput = document.getElementById("barrel-input");
+const barrelContainer = document.getElementById("barrel-container");
+const flagContainer = document.getElementById("flag-container");
+
 let randomNr;
 let maxGuessNr;
 let increment = 0;
@@ -39,6 +43,10 @@ function randomGenerator() {
   guessRoundCostum.style.visibility = "visible";
   treasureOpened.style.opacity = "0";
   treasureClosed.style.opacity = "1";
+  barrelContainer.classList.remove("animation");
+  barrelInput.classList.remove("animation");
+  flagContainer.classList.remove("animate__animated", "animate__bounceInDown");
+  flagContainer.style.opacity = "0";
 }
 
 function counterDisplay() {
@@ -82,6 +90,11 @@ const guessDisplay = () => {
 };
 
 const guess = () => {
+  barrelContainer.classList.add("animation");
+  barrelInput.classList.add("animation");
+  flagContainer.classList.add("animate__animated", "animate__bounceInDown");
+  flagContainer.style.opacity = "1";
+
   if (guessRound4.checked) {
     if (increment < 4) {
       increment += 1;

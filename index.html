@@ -6,15 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guessing Game</title>
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
   </head>
   <body>
     <section>
       <div>
-        <h3><span id="ncrementTxt"></span>/ <span id="ncrementTxt2"></span></h3>
-        <h3>how many guesses u need?</h3>
+       
+        
       </div>
 
-      <input id="playAgain" type="button" value="Play Again" />
+
 
       <h4 id="textBox">KJHJHJsss</h4>
       <div id="img-wrapper">
@@ -36,14 +40,17 @@
         </div>
 
         <div id="flag-container">
+          <h3>how many guesses u need?</h3>
           <h3 id="counterFlag">
             <span id="incrementTxt"></span> &nbsp/&nbsp
             <span id="incrementTxt2"></span>
           </h3>
+          <input id="guess-flag" type="button" value="GUESS" onclick="guess()">
           <img
             src="assets/images/black-flag-png-100-images-in-collection-page-2-black-flag-png-470_400.png"
             alt=""
           />
+          <input id="playAgain" type="button" value="Play Again" />
         </div>
         <div id="barrel-container">
           <h4>to guess nr</h4>
@@ -99,7 +106,9 @@
         </span>
           <br />
           <label for="guessedNumber">guess Number</label>
+         
           <input type="number" id="guessedNumber" />
+          <br>
           <input id="btn" type="button" value="GUESS" />
           </div>
        
