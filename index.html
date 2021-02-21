@@ -48,11 +48,18 @@
         <div id="barrel-container">
           <h4>to guess nr</h4>
           <h4 id="randomNrDisplay"></h4>
-
+          <img
+          src="assets/images/pnghut_barrel-clip-art-wood-beer-beige-zongzi-clipart.png"
+          alt=""
+        />
+        </div>
+          <div id="barrel-input">
           <p>
             In how many Rounds do you think you can guess the Number to open the
             treasure chest?
           </p>
+         
+          <span id="raound4-wrapper">
           <label for="guessRound4">4</label>
           <input
             id="guessRound4"
@@ -61,6 +68,7 @@
             onchange="counterDisplay()"
             checked
           />
+        <span id="raound5-wrapper">
           <label for="guessRound5">5</label>
           <input
             id="guessRound5"
@@ -68,6 +76,8 @@
             name="guessRounds"
             onchange="counterDisplay()"
           />
+        </span>
+          <span id="raound6-wrapper">
           <label for="guessRound6">6</label>
           <input
             id="guessRound6"
@@ -75,6 +85,8 @@
             name="guessRounds"
             onchange="counterDisplay()"
           />
+        </span>
+        <span id="raoundCostum-wrapper">
           <label for="guessRoundCostum">Costum</label>
           <input
             id="guessRoundCostum"
@@ -82,17 +94,15 @@
             name="guessRounds"
             onchange="counterDisplay()"
           />
-
-          <input id="costumNr" type="number" onchange="randomGenerator()" />
+       
+          <input id="costumNr"  min="1" max="5" style="width: 2rem;" onchange="randomGenerator()" />
+        </span>
           <br />
           <label for="guessedNumber">guess Number</label>
           <input type="number" id="guessedNumber" />
           <input id="btn" type="button" value="GUESS" />
-          <img
-            src="assets/images/pnghut_barrel-clip-art-wood-beer-beige-zongzi-clipart.png"
-            alt=""
-          />
-        </div>
+          </div>
+       
         <div id="skull-container">
           <input
             id="reset"
