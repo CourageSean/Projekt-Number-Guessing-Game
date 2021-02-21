@@ -16,8 +16,6 @@ body {
   font-family: "Pirata One";
 }
 
-
-
 #counterFlag {
   color: #fff;
   position: absolute;
@@ -27,13 +25,33 @@ body {
   font-style: italic;
 }
 
-#guess-flag{
-  
-  transform:translateY(150px)
+#guess-flag {
+  position: relative;
+  transform: translateY(150px);
+  width: 30%;
+  height: 30px;
+  background: rgb(95, 93, 93);
+  color: #fff;
+  z-index: 4;
+  font-weight: 600;
+  border-radius: 15px;
+}
+
+#flagtxt {
+  transform: translateY(80px);
+  color: #fff;
+  font-family: "Roboto";
 }
 
 #playAgain {
   visibility: hidden;
+  transform: translateY(-80px);
+  width: 30%;
+  height: 30px;
+  background: rgb(95, 93, 93);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 15px;
 }
 #costumNr {
   visibility: hidden;
@@ -48,21 +66,21 @@ body {
 #treasureOpened {
   width: 17%;
   position: absolute;
-  top: 90%;
+  top: 130%;
   left: 37%;
 }
 
 #treasureClosed {
   width: 22%;
   position: absolute;
-  top: 90%;
+  top: 130%;
   left: 35%;
 }
 #flag-container {
   width: 23%;
   position: absolute;
   right: 20%;
-  top: 70%;
+  top: 105%;
   display: grid;
   place-items: center;
   opacity: 0;
@@ -73,10 +91,9 @@ body {
   position: absolute;
   right: 20%;
   z-index: 3;
-  top: 60%;
+  top: 130%;
   display: grid;
   place-items: center;
-  
 }
 #barrel-input p {
   color: #fff;
@@ -91,7 +108,7 @@ body {
 
 #barrel-input {
   position: absolute;
-  top: 100%;
+  top: 160%;
   z-index: 3;
   right: 20%;
   width: 20%;
@@ -102,9 +119,9 @@ body {
   animation-name: barrelMove;
   -webkit-animation-duration: 4s;
   animation-duration: 4s;
-  
-          -webkit-animation-fill-mode: forwards;
-                  animation-fill-mode: forwards;
+
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 #raound4-wrapper,
@@ -134,7 +151,7 @@ body {
 #skull-container {
   width: 13%;
   position: absolute;
-  top: 140%;
+  top: 250%;
   display: grid;
   place-items: center;
 }
@@ -150,6 +167,15 @@ body {
   letter-spacing: 5px;
 }
 
+#btn {
+  width: 30%;
+  height: 30px;
+  background: rgb(95, 93, 93);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 15px;
+}
+
 #ship {
   transform: scaleX(-1);
 }
@@ -158,11 +184,13 @@ body {
   width: 23%;
   position: absolute;
 
-  top: 25%;
+  top: 95%;
   -webkit-animation-name: shipMove;
   animation-name: shipMove;
-  -webkit-animation-duration: 4s;
-  animation-duration: 4s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-duration: 1s;
+  animation-duration: 17s;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
@@ -174,79 +202,44 @@ img {
 #textBox {
   position: absolute;
 }
-.visible{
+.visible {
   visibility: visible;
 }
 /*============================================*/
+
 @-webkit-keyframes shipMove {
   0% {
-    transform: translateX(0);
-  }
-
-  15% {
-    transform: translateX(10vw);
+    transform: translateX(100px) rotate(0);
   }
   30% {
-    transform: translateX(30vw);
+    transform: translateX(400px) rotate(0);
   }
-
-  45% {
-    transform: translateX(45vw);
-  }
-
   50% {
-    transform: translateX(60vw) scaleX(-1);
+    transform: translateX(400px) rotateY(180deg);
   }
-
-  60% {
-    transform: translateX(50vw) scaleX(-1);
+  80% {
+    transform: translateX(100px) rotateY(180deg);
   }
-  75% {
-    transform: translateX(35vw);
-  }
-
-  85% {
-    transform: translateX(15vw);
-  }
-
   100% {
-    transform: translateX(0vw) scaleX(-1);
+    transform: translateX(100px) rotateY(360deg);
   }
 }
 
 @keyframes shipMove {
   0% {
-    transform: translateX(0);
-  }
-
-  15% {
-    transform: translateX(10vw);
+    transform: translateX(-10vw) rotateY(0);
   }
   30% {
-    transform: translateX(30vw);
+    transform: translateX(50vw) rotateY(0);
   }
-
-  45% {
-    transform: translateX(45vw);
-  }
-
   50% {
-    transform: translateX(60vw) scaleX(-1);
+    transform: translateX(50vw) rotateY(180deg);
   }
-
-  60% {
-    transform: translateX(50vw) scaleX(-1);
+  80% {
+    transform: translateX(-10vw) rotateY(180deg);
   }
-  75% {
-    transform: translateX(35vw);
-  }
-
-  85% {
-    transform: translateX(15vw);
-  }
-
   100% {
-    transform: translateX(0vw) scaleX(-1);
+    transform: translateX(-10vw) rotateY(360deg);
   }
 }
 
@@ -276,5 +269,4 @@ img {
   100% {
     transform: translateX(100vw) rotateZ(360deg);
   }
-}
 }
