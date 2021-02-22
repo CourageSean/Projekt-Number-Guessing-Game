@@ -15,6 +15,7 @@ const treasureClosed = document.getElementById("treasureClosed");
 const barrelInput = document.getElementById("barrel-input");
 const barrelContainer = document.getElementById("barrel-container");
 const flagContainer = document.getElementById("flag-container");
+const header = document.getElementById("header");
 
 let randomNr;
 let maxGuessNr;
@@ -65,6 +66,14 @@ function counterDisplay() {
     costumNr.style.visibility = "visible";
   }
 }
+
+function headline() {
+  header.classList.add("animate__animated", "animate__zoomIn");
+  setTimeout(function () {
+    header.classList.add("opacity");
+  }, 4500);
+}
+headline();
 
 randomGenerator();
 

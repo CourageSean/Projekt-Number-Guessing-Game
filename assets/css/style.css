@@ -14,6 +14,24 @@ body {
   width: 100vw;
   overflow: hidden;
   font-family: "Pirata One";
+  position: relative;
+}
+
+h1 {
+  position: absolute;
+  z-index: 6;
+  font-size: 4.5rem;
+  color: #fff;
+  font-weight: 600;
+  top: 23%;
+  left: 30%;
+}
+
+.opacity {
+  opacity: 0;
+}
+#header {
+  transition: opacity 3s;
 }
 
 #counterFlag {
@@ -35,6 +53,15 @@ body {
   z-index: 4;
   font-weight: 600;
   border-radius: 15px;
+}
+#guessedNumber-container {
+  position: absolute;
+  top: 270%;
+  right: 20%;
+  z-index: 5;
+  color: #000;
+  font-family: "Roboto";
+  font-weight: 600;
 }
 
 #flagtxt {
@@ -174,6 +201,7 @@ body {
   color: #fff;
   font-weight: 600;
   border-radius: 15px;
+  margin-top: 25px;
 }
 
 #ship {
