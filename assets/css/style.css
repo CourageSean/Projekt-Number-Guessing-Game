@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Pirata+One&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -190,7 +190,7 @@ body {
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
   -webkit-animation-duration: 1s;
-  animation-duration: 17s;
+  animation-duration: 20s;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
@@ -205,6 +205,36 @@ img {
 .visible {
   visibility: visible;
 }
+
+#textBox-container {
+  -webkit-animation-name: txtMove;
+  animation-name: txtMove;
+  -webkit-animation-duration: 20s;
+  animation-duration: 20s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  width: 30%;
+  position: absolute;
+  top: 40%;
+  padding: 10px;
+  display: grid;
+  place-items: center;
+}
+
+#textBox {
+  font-family: "Roboto";
+
+  border-radius: 20px;
+  position: absolute;
+  top: -30%;
+  left: 60%;
+  width: 100%;
+  background: #fff;
+  text-align: center;
+}
+
 /*============================================*/
 
 @-webkit-keyframes shipMove {
@@ -227,7 +257,7 @@ img {
 
 @keyframes shipMove {
   0% {
-    transform: translateX(-10vw) rotateY(0);
+    transform: translateX(-5vw) rotateY(0);
   }
   30% {
     transform: translateX(50vw) rotateY(0);
@@ -236,10 +266,48 @@ img {
     transform: translateX(50vw) rotateY(180deg);
   }
   80% {
-    transform: translateX(-10vw) rotateY(180deg);
+    transform: translateX(-5vw) rotateY(180deg);
   }
   100% {
-    transform: translateX(-10vw) rotateY(360deg);
+    transform: translateX(-5vw) rotateY(360deg);
+  }
+}
+
+/*=====================================*/
+
+@-webkit-keyframes txtMove {
+  0% {
+    transform: translateX(-5vw) rotateY(0);
+  }
+  30% {
+    transform: translateX(40vw) rotateY(0);
+  }
+  50% {
+    transform: translateX(40vw);
+  }
+  80% {
+    transform: translateX(-5vw);
+  }
+  100% {
+    transform: translateX(-5vw);
+  }
+}
+
+@keyframes txtMove {
+  0% {
+    transform: translateX(-5vw) rotateY(0);
+  }
+  30% {
+    transform: translateX(50vw) rotateY(0);
+  }
+  50% {
+    transform: translateX(50vw);
+  }
+  80% {
+    transform: translateX(-5vw);
+  }
+  100% {
+    transform: translateX(-5vw);
   }
 }
 

@@ -47,6 +47,7 @@ function randomGenerator() {
   barrelInput.classList.remove("animation");
   flagContainer.classList.remove("animate__animated", "animate__bounceInDown");
   flagContainer.style.opacity = "0";
+  console.log("To Guess Number is " + a);
 }
 
 function counterDisplay() {
@@ -68,6 +69,7 @@ function counterDisplay() {
 randomGenerator();
 
 const guessDisplay = () => {
+  console.log("To Guess Number is" + a);
   if (a < guessedNumber.value) {
     console.log(
       "you need to guess lower than" + guessedNumber.value + ", try again"
