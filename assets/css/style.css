@@ -227,6 +227,10 @@ img {
   width: 100%;
 }
 
+#green {
+  color: green;
+}
+
 #textBox {
   position: absolute;
 }

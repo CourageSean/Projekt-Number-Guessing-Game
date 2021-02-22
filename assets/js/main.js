@@ -70,6 +70,7 @@ function counterDisplay() {
 function headline() {
   header.classList.add("animate__animated", "animate__zoomIn");
   setTimeout(function () {
+    header.classList.remove("animate__animated", "animate__zoomIn");
     header.classList.add("opacity");
   }, 4500);
 }
@@ -92,8 +93,8 @@ const guessDisplay = () => {
   } else {
     treasureOpened.style.opacity = "1";
     treasureClosed.style.opacity = "0";
-    console.log("you won! you got me in" + increment + "guesses, play again");
-    textBox.innerHTML += `<br> you won! you got me in ${increment}  guesses, play again`;
+    console.log("You WON! you got me in" + increment + "guesses, play again");
+    textBox.innerHTML += `<br> You  <span id='green'>Won!</span> you got me in ${increment}  guesses, play again`;
 
     btn.style.visibility = "hidden";
     playAgain.style.visibility = "visible";
