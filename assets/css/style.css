@@ -45,7 +45,7 @@ h1 {
 
 #guess-flag {
   position: relative;
-  transform: translateY(150px);
+  top: 180px;
   width: 30%;
   height: 30px;
   background: rgb(95, 93, 93);
